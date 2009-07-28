@@ -1,0 +1,37 @@
+NAME
+  shared.rb
+
+DESCRIPTION
+  shared.rb provides a super easy way to share code between classes or modules
+  in a simple way.  shared code can be at the class and/or instance level and
+  users deferred evaluation so this is more powerful that the normal ruby
+  module inclusion facilities on which it is based.
+
+SYNOPSIS
+  require 'shared'
+
+  Shared 'methods' do
+    class << self
+      attr :classname
+    end
+
+    @classname = name.downcase
+
+    def objectname
+      self.class.classname + "(#{ object_id })"
+    end
+  end    
+
+  class C
+    include Shared('methods')
+  end
+
+  class B
+    include Shared('methods')
+  end
+
+  p C.classname      #=> 'c'
+  p C.new.objectname #=> 'c(1234)'
+
+  p B.classname      #=> 'b'
+  p B.new.objectname #=> 'b(4567)'
