@@ -38,8 +38,12 @@
 
 unless defined?(Shared)
   module Shared
-    Shared::VERSION = '1.1.0' unless defined?(Shared::VERSION)
+    Shared::VERSION = '1.1.1' unless defined?(Shared::VERSION)
     def version() Shared::VERSION end
+
+    def Shared.description
+      'a clean way to factor class/instance mixins in ruby'
+    end
 
     Code = {}
 
