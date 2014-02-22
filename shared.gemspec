@@ -3,7 +3,7 @@
 
 Gem::Specification::new do |spec|
   spec.name = "shared"
-  spec.version = "1.1.1"
+  spec.version = "1.1.2"
   spec.platform = Gem::Platform::RUBY
   spec.summary = "shared"
   spec.description = "a clean way to factor class/instance mixins in ruby"
@@ -18,8 +18,7 @@ Gem::Specification::new do |spec|
 
   spec.test_files = nil
 
-### spec.add_dependency 'lib', '>= version'
-#### spec.add_dependency 'map'
+  
 
   spec.extensions.push(*[])
 

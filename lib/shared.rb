@@ -38,7 +38,7 @@
 
 unless defined?(Shared)
   module Shared
-    Shared::VERSION = '1.1.1' unless defined?(Shared::VERSION)
+    Shared::VERSION = '1.1.2' unless defined?(Shared::VERSION)
     def version() Shared::VERSION end
 
     def Shared.description
